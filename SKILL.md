@@ -4,15 +4,20 @@ description: >-
   Use Maid's browser CLI to drive the browser tabs inside the Maid app on
   Windows: open a tab, navigate to a URL, go back and forward, reload, wait for
   a page to finish loading, list, inspect, switch, create, or close browser tabs,
-  and read the page — an ARIA snapshot of its elements, an arbitrary JavaScript
-  expression, a property of one element, or a yes/no about its state. Use for
+  read the page — an ARIA snapshot of its elements, an arbitrary JavaScript
+  expression, a property of one element, or a yes/no about its state — and act on
+  elements: click, double-click, fill, select, check, focus, clear, hover, scroll into
+  view, highlight, type, press a key, or insert text — and drive the mouse itself:
+  move the pointer to a coordinate, press or release a button, turn the wheel, or
+  drag one element onto another. Use for
   "browser use", "maid browser", "open a page in Maid", "navigate the Maid
   browser", "list browser tabs", "what is on this page", "read the page", and
-  "check the page I am logged into".
+  "check the page I am logged into", "click that button", "fill in the form",
+  "drag this onto that", and "click at these coordinates".
   Use maid-computer-use instead for browser windows outside Maid (Chrome, Edge)
   and for any other desktop UI, and use maid-orchestration for coordinating work
   between agent terminals.
-version: 1.1.0
+version: 1.9.0
 ---
 
 # Maid Browser Use (Windows)
