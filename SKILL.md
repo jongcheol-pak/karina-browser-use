@@ -17,7 +17,7 @@ description: >-
   Use maid-computer-use instead for browser windows outside Maid (Chrome, Edge)
   and for any other desktop UI, and use maid-orchestration for coordinating work
   between agent terminals.
-version: 1.9.0
+version: 1.13.0
 ---
 
 # Maid Browser Use (Windows)
