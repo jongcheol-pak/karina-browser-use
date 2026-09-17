@@ -1,7 +1,7 @@
 ---
-name: maid-browser-use
+name: karina-browser-use
 description: >-
-  Use Maid's browser CLI to drive the browser tabs inside the Maid app on
+  Use Karina's browser CLI to drive the browser tabs inside the Karina app on
   Windows: open a tab, navigate to a URL, go back and forward, reload, wait for
   a page to finish loading, list, inspect, switch, create, or close browser tabs,
   read the page — an ARIA snapshot of its elements, an arbitrary JavaScript
@@ -10,40 +10,40 @@ description: >-
   view, highlight, type, press a key, or insert text — and drive the mouse itself:
   move the pointer to a coordinate, press or release a button, turn the wheel, or
   drag one element onto another. Use for
-  "browser use", "maid browser", "open a page in Maid", "navigate the Maid
+  "browser use", "karina browser", "open a page in Karina", "navigate the Karina
   browser", "list browser tabs", "what is on this page", "read the page", and
   "check the page I am logged into", "click that button", "fill in the form",
   "drag this onto that", and "click at these coordinates".
-  Use maid-computer-use instead for browser windows outside Maid (Chrome, Edge)
-  and for any other desktop UI, and use maid-orchestration for coordinating work
+  Use karina-computer-use instead for browser windows outside Karina (Chrome, Edge)
+  and for any other desktop UI, and use karina-orchestration for coordinating work
   between agent terminals.
 version: 1.13.0
 ---
 
-# Maid Browser Use (Windows)
+# Karina Browser Use (Windows)
 
 This file is a discovery stub, not the usage guide. The full, version-matched browser
-reference is served by the `maid-cli` binary itself — kept out of this file on purpose so it
+reference is served by the `karina-cli` binary itself — kept out of this file on purpose so it
 can never drift from the binary that will actually run your commands.
 
 ```text
-maid-cli skills get maid-browser-use
+karina-cli skills get karina-browser-use
 ```
 
-Engage Maid's browser surface when the target is a **browser tab inside the Maid app** —
+Engage Karina's browser surface when the target is a **browser tab inside the Karina app** —
 tabs that sit beside the terminal tabs in the same window. Because they are the user's own
 tabs, pages opened here keep the logins the user already has in that browser profile.
 
-Use `maid-computer-use` instead for browser *windows* outside Maid (Chrome, Edge, Firefox)
-and for any other desktop UI, and `maid-orchestration` for coordinating work between agent
+Use `karina-computer-use` instead for browser *windows* outside Karina (Chrome, Edge, Firefox)
+and for any other desktop UI, and `karina-orchestration` for coordinating work between agent
 terminals.
 
 This provider is **Windows-only**.
 
 ## This surface talks to the running app
 
-Like `maid-orchestration` and unlike `maid-computer-use`, these commands do not act alone —
-the tabs live inside the Maid app and the CLI reaches it over a named pipe. **The app must
+Like `karina-orchestration` and unlike `karina-computer-use`, these commands do not act alone —
+the tabs live inside the Karina app and the CLI reaches it over a named pipe. **The app must
 be running and "Agent 브라우저 사용" must be on** (Settings → Browser). If it is not, every
 command answers with a JSON error saying so; the CLI will not launch the app for you,
 because that would tie the app's lifetime to a single command.
@@ -61,9 +61,9 @@ because that would tie the app's lifetime to a single command.
 These are stable and safe to run before you have read the guide:
 
 ```text
-maid-cli browser tab list --json
-maid-cli browser tab current --json
-maid-cli browser snapshot --json
+karina-cli browser tab list --json
+karina-cli browser tab current --json
+karina-cli browser snapshot --json
 ```
 
 Beyond these, read the guide rather than guessing a command surface. Every command answers

@@ -1,26 +1,26 @@
-# maid-browser-use
+# karina-browser-use
 
-[Maid](https://github.com/jongcheol-pak/Maid) 의 **브라우저 사용** 스킬이 배포되는 자리다.
-agent 가 Maid 앱 «안»의 브라우저 탭을 셸에서 조종할 수 있게 하는 능력을 알려 준다.
+[Karina](https://github.com/jongcheol-pak/Karina) 의 **브라우저 사용** 스킬이 배포되는 자리다.
+agent 가 Karina 앱 «안»의 브라우저 탭을 셸에서 조종할 수 있게 하는 능력을 알려 준다.
 
 ## 이 저장소에 있는 것
 
 `SKILL.md` 하나뿐이고, 그것은 **discovery stub** 이다 — 명령 목록·플래그·오류 표 같은
-**전문은 여기 없다.** 전문은 Maid 바이너리가 낸다:
+**전문은 여기 없다.** 전문은 Karina 바이너리가 낸다:
 
 ```text
-maid-cli skills get maid-browser-use
+karina-cli skills get karina-browser-use
 ```
 
-**일부러 그렇게 했다.** 사용법을 이 파일에 적으면 Maid 가 판을 올릴 때마다 이 파일이
+**일부러 그렇게 했다.** 사용법을 이 파일에 적으면 Karina 가 판을 올릴 때마다 이 파일이
 뒤처지고, 그러면 **실제로 명령을 처리할 바이너리와 다른 것을 읽은 agent** 가 없는 플래그를
 쓰게 된다. 바이너리가 스스로 내면 그 어긋남이 원리적으로 생기지 않는다.
 
 ## 설치
 
-Maid 의 **설정 → 워크플로 → 브라우저**에서 맨 위의 「Agent 브라우저 사용」을 켜고 두 단계
-(① Maid CLI 활성화 ② Browser Use 스킬)를 마친다. 2단계가 이 저장소의 `SKILL.md` 를 받아
-`~/.agents/skills/maid-browser-use/SKILL.md` 에 놓는다. 원격에 닿지 못하면 앱에 들어 있는
+Karina 의 **설정 → 워크플로 → 브라우저**에서 맨 위의 「Agent 브라우저 사용」을 켜고 두 단계
+(① Karina CLI 활성화 ② Browser Use 스킬)를 마친다. 2단계가 이 저장소의 `SKILL.md` 를 받아
+`~/.agents/skills/karina-browser-use/SKILL.md` 에 놓는다. 원격에 닿지 못하면 앱에 들어 있는
 판을 대신 놓으므로 오프라인에서도 설치된다.
 
 ## 무엇을 할 수 있나
@@ -39,5 +39,5 @@ Maid 의 **설정 → 워크플로 → 브라우저**에서 맨 위의 「Agent 
 
 | 스킬 | 언제 |
 |---|---|
-| [`computer-use`](https://github.com/jongcheol-pak/computer-use) | Maid 밖의 브라우저 창(Chrome·Edge)과 그 밖의 모든 데스크톱 UI |
-| [`maid-orchestration`](https://github.com/jongcheol-pak/maid-orchestration) | agent 터미널 사이의 조정(메시지·작업 배분·게이트) |
+| [`computer-use`](https://github.com/jongcheol-pak/computer-use) | Karina 밖의 브라우저 창(Chrome·Edge)과 그 밖의 모든 데스크톱 UI |
+| [`karina-orchestration`](https://github.com/jongcheol-pak/karina-orchestration) | agent 터미널 사이의 조정(메시지·작업 배분·게이트) |
