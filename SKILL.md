@@ -14,10 +14,10 @@ description: >-
   browser", "list browser tabs", "what is on this page", "read the page", and
   "check the page I am logged into", "click that button", "fill in the form",
   "drag this onto that", and "click at these coordinates".
-  Use karina-computer-use instead for browser windows outside Karina (Chrome, Edge)
-  and for any other desktop UI, and use karina-orchestration for coordinating work
-  between agent terminals.
-version: 1.13.0
+  Use karina-computer-use only when a visible window outside Karina needs GUI
+  control that a CLI, filesystem, or API cannot do, and use karina-orchestration
+  for coordinating work between agent terminals.
+version: 1.13.1
 ---
 
 # Karina Browser Use (Windows)
@@ -34,8 +34,9 @@ Engage Karina's browser surface when the target is a **browser tab inside the Ka
 tabs that sit beside the terminal tabs in the same window. Because they are the user's own
 tabs, pages opened here keep the logins the user already has in that browser profile.
 
-Use `karina-computer-use` instead for browser *windows* outside Karina (Chrome, Edge, Firefox)
-and for any other desktop UI, and `karina-orchestration` for coordinating work between agent
+Use `karina-computer-use` only when a visible window outside Karina — a browser *window*
+(Chrome, Edge, Firefox) or another desktop application — needs GUI control that a CLI,
+filesystem, or API cannot do, and `karina-orchestration` for coordinating work between agent
 terminals.
 
 This provider is **Windows-only**.
