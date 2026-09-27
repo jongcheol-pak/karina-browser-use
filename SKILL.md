@@ -2,14 +2,11 @@
 name: karina-browser-use
 description: >-
   Use Karina's browser CLI to drive the browser tabs inside the Karina app on
-  Windows: open a tab, navigate to a URL, go back and forward, reload, wait for
-  a page to finish loading, list, inspect, switch, create, or close browser tabs,
-  read the page — an ARIA snapshot of its elements, an arbitrary JavaScript
-  expression, a property of one element, or a yes/no about its state — and act on
-  elements: click, double-click, fill, select, check, focus, clear, hover, scroll into
-  view, highlight, type, press a key, or insert text — and drive the mouse itself:
-  move the pointer to a coordinate, press or release a button, turn the wheel, or
-  drag one element onto another. Use for
+  Windows: open, list, switch, create, or close tabs, navigate, go back and
+  forward, reload, and wait for a page to load; read the page (an ARIA snapshot,
+  a JavaScript expression, an element property, or a yes/no about its state);
+  act on elements (click, fill, select, check, hover, type, press a key, and
+  similar); and drive the mouse (move, press, release, wheel, drag). Use for
   "browser use", "karina browser", "open a page in Karina", "navigate the Karina
   browser", "list browser tabs", "what is on this page", "read the page", and
   "check the page I am logged into", "click that button", "fill in the form",
@@ -17,7 +14,7 @@ description: >-
   Use karina-computer-use only when a visible window outside Karina needs GUI
   control that a CLI, filesystem, or API cannot do, and use karina-orchestration
   for coordinating work between agent terminals.
-version: 1.13.1
+version: 1.13.2
 ---
 
 # Karina Browser Use (Windows)
