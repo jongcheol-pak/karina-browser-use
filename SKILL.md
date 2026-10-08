@@ -7,14 +7,12 @@ description: >-
   a JavaScript expression, an element property, or a yes/no about its state);
   act on elements (click, fill, select, check, hover, type, press a key, and
   similar); and drive the mouse (move, press, release, wheel, drag). Use for
-  "browser use", "karina browser", "open a page in Karina", "navigate the Karina
-  browser", "list browser tabs", "what is on this page", "read the page", and
-  "check the page I am logged into", "click that button", "fill in the form",
-  "drag this onto that", and "click at these coordinates".
+  any request about a page open in Karina's own browser tabs — reading it,
+  acting on it, or using the login the user already has there.
   Use karina-computer-use only when a visible window outside Karina needs GUI
   control that a CLI, filesystem, or API cannot do, and use karina-orchestration
   for coordinating work between agent terminals.
-version: 1.13.2
+version: 1.13.3
 ---
 
 # Karina Browser Use (Windows)
