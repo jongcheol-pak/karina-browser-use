@@ -12,17 +12,41 @@ description: >-
   Use karina-computer-use only when a visible window outside Karina needs GUI
   control that a CLI, filesystem, or API cannot do, and use karina-orchestration
   for coordinating work between agent terminals.
-version: 1.13.3
+version: 1.13.4
 ---
 
 # Karina Browser Use (Windows)
 
 This file is a discovery stub, not the usage guide. The full, version-matched browser
-reference is served by the `karina-cli` binary itself — kept out of this file on purpose so it
+reference is served by the Karina CLI binary itself — kept out of this file on purpose so it
 can never drift from the binary that will actually run your commands.
 
+## Resolve the CLI for this session
+
+Choose the executable once and reuse it for every later command:
+
+- If the `KARINA_CLI_COMMAND` environment variable is set, use its value.
+- Otherwise, use the one already on `PATH`: `karina-cli` for the release build,
+  `karina-dev-cli` for the dev build (Settings → Browser → **Karina CLI 활성화** puts
+  whichever build you are running there, and each name reaches its own app).
+- Otherwise, use the full path of the installed binary.
+
+**It is the CLI binary, not the app binary.** Karina ships two executables that are built
+together: the app opens the workspace window and has no console, so it does not answer
+these commands; the CLI (`karina-cli.exe`, or `karina-dev-cli.exe` in a dev build) is the
+one that reads them and writes JSON to stdout.
+
+Below, `KARINA` is a placeholder for the executable you resolved. Substitute it before
+running anything; do not create a shell variable or run `KARINA` literally. This works the
+same way in PowerShell, cmd.exe, and POSIX shells.
+
+If the selected executable cannot run, report its exact error and stop. Do not fall through
+to another executable, which could silently target a different Karina build.
+
+## Load the full guide before running Karina commands
+
 ```text
-karina-cli skills get karina-browser-use
+KARINA skills get karina-browser-use
 ```
 
 Engage Karina's browser surface when the target is a **browser tab inside the Karina app** —
@@ -57,9 +81,9 @@ because that would tie the app's lifetime to a single command.
 These are stable and safe to run before you have read the guide:
 
 ```text
-karina-cli browser tab list --json
-karina-cli browser tab current --json
-karina-cli browser snapshot --json
+KARINA browser tab list --json
+KARINA browser tab current --json
+KARINA browser snapshot --json
 ```
 
 Beyond these, read the guide rather than guessing a command surface. Every command answers
