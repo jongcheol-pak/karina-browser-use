@@ -12,7 +12,7 @@ description: >-
   Use karina-computer-use only when a visible window outside Karina needs GUI
   control that a CLI, filesystem, or API cannot do, and use karina-orchestration
   for coordinating work between agent terminals.
-version: 1.13.4
+version: 1.13.5
 ---
 
 # Karina Browser Use (Windows)
@@ -27,7 +27,7 @@ Choose the executable once and reuse it for every later command:
 
 - If the `KARINA_CLI_COMMAND` environment variable is set, use its value.
 - Otherwise, use the one already on `PATH`: `karina-cli` for the release build,
-  `karina-dev-cli` for the dev build (Settings → Browser → **Karina CLI 활성화** puts
+  `karina-dev-cli` for the dev build (Settings → AI 기능 → **Karina CLI** puts
   whichever build you are running there, and each name reaches its own app).
 - Otherwise, use the full path of the installed binary.
 
